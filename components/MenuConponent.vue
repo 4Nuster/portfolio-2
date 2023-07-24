@@ -4,10 +4,14 @@
     <div class="scrolling-ball"></div>
     <div class="resume"><a href="https://rxresu.me/nfstopplayer/resu1-long" target="_blank">RESUME</a></div>
     <ul class="socials">
-      <li class="linkedin"><a href="https://www.linkedin.com/in/yassinebacha/" target="_blank"><img src="@/assets/icons/social/linkedin.svg" alt=""></a></li>
-      <li class="github"><a href="https://github.com/4Nuster/" target="_blank"><img src="@/assets/icons/social/github.svg" alt=""></a></li>
-      <li class="artstation"><a href="https://nuster4.artstation.com/" target="_blank"><img src="@/assets/icons/social/artstation.svg" alt=""></a></li>
-      <li class="mail"><a href="mailto:yassine.bacha@proton.me" target="_blank"><img src="@/assets/icons/social/mail.svg" alt=""></a></li>
+      <li class="linkedin"><a href="https://www.linkedin.com/in/yassinebacha/" target="_blank"><img
+            src="@/assets/icons/social/linkedin.svg" alt=""></a></li>
+      <li class="github"><a href="https://github.com/4Nuster/" target="_blank"><img src="@/assets/icons/social/github.svg"
+            alt=""></a></li>
+      <li class="artstation"><a href="https://nuster4.artstation.com/" target="_blank"><img
+            src="@/assets/icons/social/artstation.svg" alt=""></a></li>
+      <li class="mail"><a href="mailto:yassine.bacha@proton.me" target="_blank"><img src="@/assets/icons/social/mail.svg"
+            alt=""></a></li>
     </ul>
     <ul class="menu-items">
       <li class="menu-home" onclick="document.getElementById('home').scrollIntoView();">HOME</li>
@@ -24,7 +28,7 @@ export default {
   methods: {
     runOnScroll: () => {
       let scrollable = document.getElementsByTagName("html")[0].scrollTop;
-      
+
       if (scrollable >= visualViewport.height * 4) {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41 * 4).toString() + "px)";
         let item = document.getElementsByClassName("menu-awards")[0];
@@ -42,18 +46,18 @@ export default {
         let others = [
           document.getElementsByClassName("menu-home")[0],
           document.getElementsByClassName("menu-about")[0],
-          document.getElementsByClassName("menu-skills")[0], 
+          document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
         item.style.color = "#C17C64";
         others.forEach(other => other.style.color = "#ffffff");
       } else if (scrollable >= visualViewport.height * 2) {
-        document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41 * 2).toString()  + "px)";
+        document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41 * 2).toString() + "px)";
         let item = document.getElementsByClassName("menu-skills")[0];
         let others = [
-          document.getElementsByClassName("menu-home")[0], 
-          document.getElementsByClassName("menu-about")[0], 
-          document.getElementsByClassName("menu-projects")[0], 
+          document.getElementsByClassName("menu-home")[0],
+          document.getElementsByClassName("menu-about")[0],
+          document.getElementsByClassName("menu-projects")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
         item.style.color = "#C17C64";
@@ -62,9 +66,9 @@ export default {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41).toString() + "px)";
         let item = document.getElementsByClassName("menu-about")[0];
         let others = [
-          document.getElementsByClassName("menu-home")[0], 
-          document.getElementsByClassName("menu-projects")[0], 
-          document.getElementsByClassName("menu-skills")[0], 
+          document.getElementsByClassName("menu-home")[0],
+          document.getElementsByClassName("menu-projects")[0],
+          document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
         item.style.color = "#C17C64";
@@ -73,9 +77,9 @@ export default {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh)";
         let item = document.getElementsByClassName("menu-home")[0];
         let others = [
-          document.getElementsByClassName("menu-projects")[0], 
-          document.getElementsByClassName("menu-about")[0], 
-          document.getElementsByClassName("menu-skills")[0], 
+          document.getElementsByClassName("menu-projects")[0],
+          document.getElementsByClassName("menu-about")[0],
+          document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
         item.style.color = "#C17C64";
@@ -98,7 +102,7 @@ export default {
 .line {
   position: absolute;
   height: 100vh;
-  background: linear-gradient(to bottom, #C17C64, #5B423C);
+  background: linear-gradient(to bottom, #c29a75, #c17c64);
   width: 5px;
   margin-left: 2vw;
   z-index: -1;

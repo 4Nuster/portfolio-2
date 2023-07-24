@@ -1,0 +1,5 @@
+Real-Time Human Pose Recognition
+
+Human pose recognition in real-time using Computer Vision
+
+Tools used: Python, OpenCV, PyQt

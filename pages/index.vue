@@ -1,11 +1,11 @@
 <template>
   <article class="main-article">
     <MenuConponentVue />
-    <HeroComponentVue id="home"/>
-    <AboutComponentVue id="about"/>
-    <SkillsComponentVue id="skills"/>
-    <ProjectsComponentVue id="projects"/>
-    <AboutComponentVue id="awards"/>
+    <HeroComponentVue id="home" />
+    <AboutComponentVue id="about" />
+    <SkillsComponentVue id="skills" />
+    <ProjectsComponentVue id="projects" />
+    <AboutComponentVue id="awards" />
   </article>
 </template>
 
@@ -45,8 +45,18 @@ html {
 }
 
 @font-face {
+  font-family: DovensSemiBold;
+  src: url("../assets/fonts/DOVENSPersonalUse-SemiBold.otf");
+}
+
+@font-face {
   font-family: DovensRegular;
   src: url("../assets/fonts/DOVENSPersonalUse-Regular.otf");
+}
+
+@font-face {
+  font-family: DovensLight;
+  src: url("../assets/fonts/DOVENSPersonalUse-Light.otf");
 }
 
 @font-face {
@@ -61,6 +71,7 @@ html {
 
 body {
   background-color: #151518;
+  /*background: linear-gradient(to bottom, #151518, #0d0d0f, #151518);*/
 }
 
 h1,
@@ -75,18 +86,23 @@ h6 {
 h1 {
   animation: text-slide-in 500ms forwards;
 }
+
 h2 {
   animation: text-slide-in 500ms 500ms forwards;
 }
+
 h3 {
   animation: text-slide-in 500ms 1s forwards;
 }
+
 h4 {
   animation: text-slide-in 500ms 1500ms forwards;
 }
+
 h5 {
   animation: text-slide-in 500ms 2s forwards;
 }
+
 h6 {
   animation: text-slide-in 500ms 2500ms forwards;
 }
@@ -96,6 +112,7 @@ h6 {
     opacity: 0%;
     transform: translateY(20px);
   }
+
   to {
     opacity: 100%;
     transform: translateY(0px);

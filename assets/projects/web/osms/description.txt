@@ -1,0 +1,6 @@
+Originova School Management System (OSMS) is a desktop software for schools to help them efficiently manage the resources of their school (teachers, students, classes, courses, payment, salaries, schedule,...)
+
+My work:
+A fully customizable certificate, where the client can customize the certificate's colors, title, logo, and more
+
+Tools used: JavaScript, Vue

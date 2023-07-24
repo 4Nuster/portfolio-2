@@ -6,7 +6,7 @@
         <span class="start">&#8220;</span>NOOSTER<span>&#8221;</span>
       </h2>
       <h1 class="title">YASSINE BACHA</h1>
-      <h2 class="subtitle">FRONTEND DEVELOPER<br />MSc IN COMPUTER VISION</h2>
+      <h2 class="subtitle">SOFTWARE DEVELOPER<br />MSc IN COMPUTER VISION</h2>
       <p class="scroll">Scroll down to continue</p>
     </div>
   </section>
@@ -46,9 +46,11 @@ export default {};
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -105,11 +107,12 @@ export default {};
   0% {
     opacity: 0%;
   }
+
   50% {
     opacity: 100%;
   }
+
   100% {
     opacity: 0%;
   }
-}
-</style>
+}</style>

@@ -115,4 +115,102 @@ export default {};
   100% {
     opacity: 0%;
   }
-}</style>
+}
+
+@media only screen and (max-width: 1600px) {
+  .hero .container {
+    margin-top: 180px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .hero .container {
+    margin-top: 150px;
+  }
+
+  .hero .title {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .hero .subtitle {
+    font-size: 40px;
+  }
+
+  .nickname {
+    font-size: 64px;
+  }
+
+  .scroll {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero .title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .hero .subtitle {
+    font-size: 32px;
+  }
+
+  .nickname {
+    font-size: 54px;
+  }
+
+  .scroll {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero .title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .hero .subtitle {
+    font-size: 32px;
+  }
+
+  .nickname {
+    font-size: 48px;
+    margin-right: 32vw;
+  }
+
+  .scroll {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    overflow: visible;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .hero .title {
+    font-size: 54px;
+    line-height: 54px;
+  }
+
+  .hero .subtitle {
+    font-size: 20px;
+  }
+
+  .nickname {
+    font-size: 32px;
+    margin-right: auto;
+  }
+
+  .scroll {
+    margin-top: 100px;
+    font-size: 18px;
+  }
+}
+</style>

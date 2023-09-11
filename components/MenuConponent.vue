@@ -18,7 +18,7 @@
       <li class="menu-about" onclick="document.getElementById('about').scrollIntoView();">ABOUT</li>
       <li class="menu-skills" onclick="document.getElementById('skills').scrollIntoView();">SKILLS</li>
       <li class="menu-projects" onclick="document.getElementById('projects').scrollIntoView();">PROJECTS</li>
-      <li class="menu-awards" onclick="document.getElementById('awards').scrollIntoView();">AWARDS</li>
+      <!-- <li class="menu-awards" onclick="document.getElementById('awards').scrollIntoView();">AWARDS</li> -->
     </ul>
   </section>
 </template>

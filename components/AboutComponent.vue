@@ -9,14 +9,23 @@
             <h2 class="title-bg">IT IS I</h2>
           </div>
           <p class="content">
-            The FitnessGram Pacer Test is a multistage aerobic capacity test that
-            progressively gets more difficult as it continues The meter pacer test
-            will begin in seconds Line up at the start The running speed starts
-            slowly but gets faster each minute after you hear this signal A single
-            lap should be completed each time you hear this sound Remember to run in
-            a straight line and run as long as possible The second time you fail to
-            complete a lap before the sound your test is over The test will begin on
-            the word start On your mark get ready start
+            A Software Developer with an MSc in Computer Vision<span>.</span> I possess a strong aptitude for rapid
+            learning<span>,</span>
+            creativity<span>,</span> adaptability<span>,</span> and self<span>-</span>motivation<span>.</span> My passion
+            lies in the realms of Web Development<span>,</span> UI<span>/</span>UX Design<span>,</span>
+            Virtual Reality<span>,</span> and Artificial Intelligence<span>.</span>
+            <br><br>
+            Work Experience<span>:</span> <br>
+            <span>-</span> Salesforce Developer Consultant at SOLJIT <span>(</span>Feb <span>2023 -</span>
+            Present<span>)</span> <br>
+            <span>-</span> Frontend Developer and UI<span>/</span>UX Designer <span>(</span>Jul <span>2022 -</span> Feb
+            <span>2023)</span> <br>
+            <br>
+            Education<span>:</span> <br>
+            <span>-</span> MSc<span>,</span> Computer Vision at USTHB <span>(</span>Oct <span>2022)</span>
+            <br>
+            <span>-</span> BSc<span>,</span> Software Engineering at USTHB <span>(</span>Nov
+            <span>2020)</span>
           </p>
         </div>
         <img class="my-photo" src="../assets/me.png" alt="">
@@ -54,9 +63,11 @@ export default {};
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -64,9 +75,10 @@ export default {};
 
 .container {
   text-align: left;
-  width: 40vw;
+  width: 38vw;
   margin-right: 5vw;
 }
+
 .title-grid {
   display: grid;
 }
@@ -104,6 +116,10 @@ export default {};
   color: #ffffff;
 }
 
+.content span {
+  font-family: RussoOne, sans-serif;
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -114,5 +130,68 @@ export default {};
 .my-photo {
   height: 50vh;
   filter: drop-shadow(0 6px 12px #00000088);
+}
+
+@media only screen and (max-width: 1600px) {
+  .container {
+    width: 32vw;
+  }
+
+  .my-photo {
+    height: 40vh;
+  }
+
+  .title,
+  .title-bg {
+    font-size: 54px;
+  }
+
+  .content {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .title,
+  .title-bg {
+    font-size: 48px;
+  }
+
+  .content {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .title,
+  .title-bg {
+    font-size: 40px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .about {
+    height: auto;
+  }
+
+  .flex {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+
+  .container {
+    width: 80vw;
+    margin-right: 0;
+  }
+
+  .my-photo {
+    height: 80vw;
+  }
 }
 </style>

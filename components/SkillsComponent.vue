@@ -11,41 +11,49 @@
         <div :key="selectedSkill" v-if="skills[selectedSkill].subskills[0].show"
           class="skill left left-one left-one-anim">
           <p v-html="skills[selectedSkill].subskills[0].name"></p>
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[0].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[0].logo)"
+            alt="">
         </div>
         <div :key="(selectedSkill + 1)" v-if="skills[selectedSkill].subskills[1].show"
           class="skill right right-one right-one-anim">
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[1].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[1].logo)"
+            alt="">
           <p v-html="skills[selectedSkill].subskills[1].name"></p>
         </div>
         <div :key="(selectedSkill + 2)" v-if="skills[selectedSkill].subskills[2].show"
           class="skill left left-two left-two-anim">
           <p v-html="skills[selectedSkill].subskills[2].name"></p>
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[2].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[2].logo)"
+            alt="">
         </div>
         <div :key="(selectedSkill + 3)" v-if="skills[selectedSkill].subskills[3].show"
           class="skill right right-two right-two-anim">
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[3].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[3].logo)"
+            alt="">
           <p v-html="skills[selectedSkill].subskills[3].name"></p>
         </div>
         <div :key="(selectedSkill + 4)" v-if="skills[selectedSkill].subskills[4].show"
           class="skill left left-three left-three-anim">
           <p v-html="skills[selectedSkill].subskills[4].name"></p>
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[4].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[4].logo)"
+            alt="">
         </div>
         <div :key="(selectedSkill + 5)" v-if="skills[selectedSkill].subskills[5].show"
           class="skill right right-three right-three-anim">
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[5].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[5].logo)"
+            alt="">
           <p v-html="skills[selectedSkill].subskills[5].name"></p>
         </div>
         <div :key="(selectedSkill + 6)" v-if="skills[selectedSkill].subskills[6].show"
           class="skill left left-four left-four-anim">
           <p v-html="skills[selectedSkill].subskills[6].name"></p>
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[6].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[6].logo)"
+            alt="">
         </div>
         <div :key="(selectedSkill + 7)" v-if="skills[selectedSkill].subskills[7].show"
           class="skill right right-four right-four-anim">
-          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[7].logo)" alt="">
+          <img class="skill-icon" :src="require('@/assets/icons/skills/' + skills[selectedSkill].subskills[7].logo)"
+            alt="">
           <p v-html="skills[selectedSkill].subskills[7].name"></p>
         </div>
       </div>
@@ -270,6 +278,9 @@ export default {
       ]
     }
   },
+  mounted() {
+    document.getElementsByClassName("left-arrow")[0].classList.add("disabled-click");
+  },
   methods: {
     leftSkill() {
       let vm = this;
@@ -335,8 +346,8 @@ export default {
 
           setTimeout(() => {
             document.getElementsByClassName("selected-skill")[0].classList.remove("slide-selected-skill-right-end");
-            document.getElementsByClassName("arrow")[0].classList.remove("disabled-click");
-            document.getElementsByClassName("arrow")[1].classList.remove("disabled-click");
+            if (!(vm.selectedSkill == (vm.skills.length - 1))) document.getElementsByClassName("right-arrow")[0].classList.remove("disabled-click");
+            if (!(vm.selectedSkill == 0)) document.getElementsByClassName("left-arrow")[0].classList.remove("disabled-click");
           }, 1000);
         }, 1000);
       }
@@ -682,4 +693,124 @@ export default {
 
 .right-four-anim {
   animation: slide-selected-skill-right-end-anim 500ms 450ms ease-in-out forwards;
-}</style>
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .title,
+  .title-bg {
+    font-size: 60px;
+  }
+
+  .crincle {
+    height: 450px;
+  }
+
+  .skills-grid .skill-icon {
+    height: 50px;
+  }
+
+  .skills-grid {
+    width: calc(200px + 250px + 200px);
+    grid-template-columns: repeat(2, 200px);
+    grid-row-gap: 40px;
+    grid-column-gap: 250px;
+    font-size: 18px;
+  }
+
+  .skills-grid .left p {
+    margin-right: 60px;
+  }
+
+  .skills-grid .skill p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .skill-selector .selected-skill {
+    font-size: 18px;
+    width: 220px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .title,
+  .title-bg {
+    font-size: 48px;
+  }
+
+  .crincle {
+    height: 400px;
+  }
+
+  .skills-grid .skill-icon {
+    height: 50px;
+  }
+
+  .skills-grid {
+    width: calc(180px + 200px + 180px);
+    grid-template-columns: repeat(2, 180px);
+    grid-row-gap: 40px;
+    grid-column-gap: 200px;
+    font-size: 16px;
+  }
+
+  .skills-grid .left p {
+    margin-right: 60px;
+  }
+
+  .skills-grid .skill p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .skill-selector .selected-skill {
+    font-size: 16px;
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .title,
+  .title-bg {
+    font-size: 40px;
+  }
+
+  .crincle {
+    height: 250px;
+  }
+
+  .skills-grid .skill-icon {
+    height: 0px;
+  }
+
+  .skills-grid {
+    width: calc(100px + 20px + 100px);
+    grid-template-columns: repeat(2, 100px);
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    font-size: 11px;
+  }
+
+  .skills-grid .left p {
+    margin-right: 10px;
+  }
+
+  .skills-grid .skill p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .skill-selector {
+    width: 100vw;
+    margin-top: 300px;
+  }
+
+  .skill-selector .selected-skill {
+    font-size: 14px;
+    width: 140px;
+  }
+}
+</style>

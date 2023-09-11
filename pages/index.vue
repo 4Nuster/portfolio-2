@@ -1,11 +1,11 @@
 <template>
   <article class="main-article">
-    <MenuConponentVue />
+    <MenuConponentVue id="menu" />
     <HeroComponentVue id="home" />
     <AboutComponentVue id="about" />
     <SkillsComponentVue id="skills" />
     <ProjectsComponentVue id="projects" />
-    <AboutComponentVue id="awards" />
+    <!-- <AboutComponentVue id="awards" /> -->
   </article>
 </template>
 
@@ -116,6 +116,12 @@ h6 {
   to {
     opacity: 100%;
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #menu {
+    display: none;
   }
 }
 </style>

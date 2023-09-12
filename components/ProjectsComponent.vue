@@ -608,7 +608,7 @@ export default {
 
 @keyframes slide-selected-skill-left-begin-anim {
   from {
-    opacity: 100%;
+    opacity: 1;
   }
 
   to {
@@ -628,7 +628,7 @@ export default {
   }
 
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -638,7 +638,7 @@ export default {
 
 @keyframes slide-selected-skill-right-begin-anim {
   from {
-    opacity: 100%;
+    opacity: 1;
   }
 
   to {
@@ -658,7 +658,7 @@ export default {
   }
 
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 

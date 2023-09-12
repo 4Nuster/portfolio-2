@@ -26,6 +26,42 @@ export default {
     SkillsComponentVue,
     ProjectsComponentVue
   },
+  head() {
+    return {
+      link: [
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/medical-palpation-assistance-system/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/medical-palpation-assistance-system/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/medical-palpation-assistance-system/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/timgad/1.jpg"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/timgad/2.jpg"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/timgad/3.jpg"
+        },
+      ]
+    }
+  }
 };
 </script>
 

@@ -769,6 +769,12 @@ export default {
     font-size: 16px;
     width: 180px;
   }
+
+  .about {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 @media only screen and (max-width: 480px) {

@@ -185,9 +185,7 @@ export default {
           description:
             `VidDom is a system that aims to aid vehicle owners to easily contact mechanics and request oil change for their vehicle<span>,</span> change parts<span>,</span>
             and more<br/>
-            The VidDom system comprises an API<span>,</span> two mobile apps <span>(</span>one for clients and one for mechanics<span>),</span> a website <span>(</span>
-            to showcase the apps<span>),</span> and an administrator dashboard<br/>
-            My work comprised the design of the website, and the realisation of features within the mobile apps and administrator dashboard<br/><br/>
+            My work comprised the design of the website<span>,</span> and the realisation of features within the mobile apps and administrator dashboard<br/><br/>
 
             Tools used<span>:</span> HTML<span>/</span>CSS<span>,</span> Javascript<span>,</span> Vue JS<span>,</span> Ionic<span>,</span> Adobe XD`,
           tags: ['web', 'uiux'],
@@ -382,14 +380,17 @@ export default {
 .flex {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
+  align-items: flex-start;
 }
 
 .title-grid {
-  position: absolute;
+  /* position: absolute; */
   display: grid;
-  transform: rotate(-90deg);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  /* transform: rotate(-90deg); */
   /* margin-left: -50vw; */
 }
 
@@ -403,7 +404,7 @@ export default {
   font-family: DovensBold, sans-serif;
   font-size: clamp(48px, 70vw, 100px);
   line-height: clamp(48px, 70vw, 100px);
-  background: linear-gradient(to left, #c29a75, #c17c64);
+  background: linear-gradient(to top, #c29a75, #c17c64);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 6px 12px #00000088);
@@ -424,7 +425,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 22vw;
+  /* margin-left: 22vw; */
   /*padding-right: 2vw;
   border-radius: 5%;
   border-right: #C17C64 5px solid;*/
@@ -497,7 +498,8 @@ export default {
   margin-left: 3vw;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  /* height: 70vh; */
+  height: 800px;
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
@@ -666,14 +668,161 @@ export default {
   pointer-events: none;
 }
 
-@media only screen and (max-width: 1600px) {}
+@media only screen and (max-width: 1600px) {
 
-@media only screen and (max-width: 1400px) {}
+  .title,
+  .title-bg {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .projects-menu,
+  .counter-title {
+    font-size: 18px;
+  }
+
+  .counter,
+  .counter-bg {
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  .project-title {
+    font-size: 40px;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .project-container {
+    height: 750px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .title,
+  .title-bg {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .projects-menu,
+  .counter-title {
+    font-size: 16px;
+  }
+
+  .counter,
+  .counter-bg {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+
+  .project-image-blur,
+  .project-image-bg,
+  .project-image {
+    border-radius: 12px;
+    width: 500px;
+    height: 300px;
+  }
+
+  .project-image-controller {
+    border-radius: 12px;
+    width: calc(500px - 6px);
+    height: 300px;
+  }
+
+  .project-controls {
+    margin-left: 50px;
+  }
+}
 
 @media only screen and (max-width: 1200px) {}
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+  .projects-menu-and-counter {
+    display: none;
+  }
 
-@media only screen and (max-width: 768px) {}
+  .title-grid {
+    writing-mode: initial;
+    transform: rotate(0deg);
+  }
+
+  .title {
+    background: linear-gradient(to bottom, #c29a75, #c17c64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .project-container {
+    width: auto;
+  }
+
+  .project-image-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .title,
+  .title-bg {
+    font-size: 40px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-image-blur,
+  .project-image-bg,
+  .project-image {
+    border-radius: 12px;
+    width: 80vw;
+    height: calc(80vw * 0.6);
+  }
+
+  .project-image-controller {
+    border-radius: 12px;
+    width: calc(80vw - 6px);
+    height: calc(80vw * 0.6);
+  }
+
+  .project-content,
+  .project-previous,
+  .project-next {
+    font-size: 11px;
+  }
+
+  .project-controls {
+    width: 80vw;
+    margin-left: 0px;
+    margin-top: -30px;
+  }
+
+  .project-container {
+    height: auto;
+  }
+}
 </style>
   

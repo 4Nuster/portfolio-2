@@ -8,6 +8,11 @@
 <script>
 import resumePdf from '@/assets/Resume.pdf';
 export default {
+  head() {
+    return {
+      title: "Yassine Bacha | Resume",
+    }
+  },
   data() {
     return {
       resumePdf: resumePdf,

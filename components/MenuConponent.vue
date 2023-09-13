@@ -2,7 +2,8 @@
   <section class="menu">
     <div class="line"></div>
     <div class="scrolling-ball"></div>
-    <div class="resume"><a href="https://rxresu.me/nfstopplayer/resu1-long" target="_blank">RESUME</a></div>
+    <!-- <div class="resume"><a href="https://rxresu.me/nfstopplayer/resu1-long" target="_blank">RESUME</a></div> -->
+    <div class="resume"><a href="#" @click="openResume" target="_blank">RESUME</a></div>
     <ul class="socials">
       <li class="linkedin"><a href="https://www.linkedin.com/in/yassinebacha/" target="_blank"><img
             src="@/assets/icons/social/linkedin.svg" alt=""></a></li>
@@ -26,6 +27,9 @@
 <script>
 export default {
   methods: {
+    openResume() {
+      window.open('/resume', '_blank');
+    },
     runOnScroll: () => {
       let scrollable = document.getElementsByTagName("html")[0].scrollTop;
 
@@ -165,5 +169,30 @@ export default {
   list-style-type: none;
   transition: color 500ms;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1023px) {
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+  }
+
+  .line {
+    margin-left: 20px;
+  }
+
+  .scrolling-ball {
+    margin-left: 12px;
+  }
+
+  .socials,
+  .menu-items {
+    margin-left: 35px;
+  }
+
+  .resume {
+    margin-left: 75vw;
+  }
 }
 </style>

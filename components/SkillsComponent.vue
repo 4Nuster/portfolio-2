@@ -81,8 +81,8 @@ export default {
               show: true,
             },
             {
-              name: "REACT",
-              logo: "react.svg",
+              name: "LWC",
+              logo: "salesforce.svg",
               show: true,
             },
             {
@@ -176,6 +176,11 @@ export default {
               show: true,
             },
             {
+              name: "APEX",
+              logo: "salesforce.svg",
+              show: true,
+            },
+            {
               name: "ANDROID STUDIO",
               logo: "android.svg",
               show: true,
@@ -185,7 +190,7 @@ export default {
               logo: "processing.svg",
               show: true,
             },
-            { show: false }, { show: false }, { show: false }
+            { show: false }, { show: false }
           ]
         },
         {
@@ -193,8 +198,13 @@ export default {
           subskills: [
             { show: false }, { show: false },
             {
-              name: "SQL",
+              name: "MySQL",
               logo: "sql.svg",
+              show: true,
+            },
+            {
+              name: "SOQL",
+              logo: "salesforce.svg",
               show: true,
             },
             {
@@ -202,7 +212,7 @@ export default {
               logo: "mongodb.svg",
               show: true,
             },
-            { show: false }, { show: false }, { show: false }, { show: false },
+            { show: false }, { show: false }, { show: false },
           ]
         },
         {

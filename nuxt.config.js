@@ -42,5 +42,16 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.(pdf)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      });
+    },
+  },
 }

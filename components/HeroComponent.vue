@@ -3,7 +3,7 @@
     <img class="bg1" src="../assets/crincle.svg">
     <div class="container">
       <h2 class="nickname">
-        <span class="start">&#8220;</span>NOOSTER<span>&#8221;</span>
+        <span class="start">&#8220;</span>NUSTER<span>&#8221;</span>
       </h2>
       <h1 class="title">YASSINE BACHA</h1>
       <h2 class="subtitle">SOFTWARE DEVELOPER<br />MSc IN COMPUTER VISION</h2>
@@ -62,7 +62,7 @@ export default {};
   color: #151518;
   -webkit-text-stroke: .04em #c29a7588;
   line-height: 0px;
-  margin-right: 24vw;
+  margin-right: 20vw;
   margin-bottom: 20px;
 }
 

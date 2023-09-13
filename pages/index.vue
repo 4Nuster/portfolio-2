@@ -1,6 +1,7 @@
 <template>
   <article class="main-article">
-    <MenuConponentVue id="menu" />
+    <img src="@/assets/icons/menu.png" class="menu-btn" @click="toggleMenu">
+    <MenuConponentVue class="menu-hidden" id="menu" />
     <HeroComponentVue id="home" />
     <AboutComponentVue id="about" />
     <SkillsComponentVue id="skills" />
@@ -26,9 +27,63 @@ export default {
     SkillsComponentVue,
     ProjectsComponentVue
   },
+  data() {
+    return {
+      menuHidden: true,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      // if (!this.menuHidden) {
+      //   this.menuHidden = true;
+      //   document.getElementById("menu").classList.remove("menu-hidden");
+      // } else {
+      //   this.menuHidden = false;
+      //   document.getElementById("menu").classList.add("menu-hidden");
+      // }
+      if (!this.menuHidden) {
+        this.menuHidden = true;
+        document.getElementById('menu').classList.replace('menu-hidden', 'menu-visible');
+      } else {
+        this.menuHidden = false;
+        document.getElementById('menu').classList.replace('menu-visible', 'menu-hidden');
+      }
+    }
+  },
   head() {
     return {
+      title: "Yassine Bacha | Portfolio",
       link: [
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-Bold.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-SemiBold.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-Regular.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-Light.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/RussoOne-Regular.ttf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/SecularOne-Regular.ttf",
+        },
         {
           rel: "preload",
           as: "image",
@@ -58,6 +113,126 @@ export default {
           rel: "preload",
           as: "image",
           href: "@/assets/game/timgad/3.jpg"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/parker/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/parker/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/parker/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/hiragana-pose-estimation/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/hiragana-pose-estimation/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/hiragana-pose-estimation/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/movement-recognition/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/movement-recognition/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/movement-recognition/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/tic-tac-toe-minmax/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/tic-tac-toe-minmax/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/sinal/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/sinal/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/sinal/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/swiftlinks/client.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/swiftlinks/seller.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/swiftlinks/delivery.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/taleb-universe/all-3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/viddom/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/viddom/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/viddom/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/web/originova/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/web/originova/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/web/osms/1.png"
         },
       ]
     }
@@ -155,9 +330,40 @@ h6 {
   }
 }
 
+.menu-btn {
+  display: none;
+}
+
+.menu-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s opacity, 0s visibility;
+}
+
 @media only screen and (max-width: 1023px) {
-  #menu {
-    display: none;
+  .menu-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s opacity, 0.5s visibility;
+  }
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    z-index: 70;
+    filter: drop-shadow(0 4px 4px #000000aa);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-article {
+    overflow-x: hidden;
   }
 }
 </style>

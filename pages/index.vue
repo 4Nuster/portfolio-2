@@ -44,9 +44,11 @@ export default {
       if (!this.menuHidden) {
         this.menuHidden = true;
         document.getElementById('menu').classList.replace('menu-hidden', 'menu-visible');
+        document.getElementsByClassName('menu-btn')[0].classList.add('menu-btn-flipped');
       } else {
         this.menuHidden = false;
         document.getElementById('menu').classList.replace('menu-visible', 'menu-hidden');
+        document.getElementsByClassName('menu-btn')[0].classList.remove('menu-btn-flipped');
       }
     }
   },
@@ -332,6 +334,11 @@ h6 {
 
 .menu-btn {
   display: none;
+  transition: transform 500ms ease-in-out;
+}
+
+.menu-btn-flipped {
+  transform: rotate(90deg);
 }
 
 .menu-visible {

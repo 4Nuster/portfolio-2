@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <LoadingComponentVue v-if="isLoading" @loading-complete="loadingComplete" />
-    <article class="main-article">
-      <img src="@/assets/icons/menu.png" class="menu-btn" @click="toggleMenu">
-      <MenuConponentVue class="menu-hidden" id="menu" />
-      <HeroComponentVue id="home" />
-      <AboutComponentVue id="about" />
-      <SkillsComponentVue id="skills" />
-      <ProjectsComponentVue id="projects" />
-      <!-- <AboutComponentVue id="awards" /> -->
-    </article>
-  </div>
+  <article class="main-article">
+    <img src="@/assets/icons/menu.png" class="menu-btn" @click="toggleMenu">
+    <MenuConponentVue class="menu-hidden" id="menu" />
+    <HeroComponentVue id="home" />
+    <AboutComponentVue id="about" />
+    <SkillsComponentVue id="skills" />
+    <ProjectsComponentVue id="projects" />
+    <!-- <AboutComponentVue id="awards" /> -->
+  </article>
 </template>
 
 <script>
@@ -19,7 +16,6 @@ import AboutComponentVue from "@/components/AboutComponent.vue";
 import MenuConponentVue from "@/components/MenuConponent.vue";
 import SkillsComponentVue from "@/components/SkillsComponent.vue";
 import ProjectsComponentVue from "@/components/ProjectsComponent.vue";
-import LoadingComponentVue from '~/components/LoadingComponent.vue';
 
 
 export default {
@@ -29,19 +25,14 @@ export default {
     AboutComponentVue,
     MenuConponentVue,
     SkillsComponentVue,
-    ProjectsComponentVue,
-    LoadingComponentVue
+    ProjectsComponentVue
   },
   data() {
     return {
-      isLoading: true,
       menuHidden: true,
     }
   },
   methods: {
-    loadingComplete() {
-      this.isLoading = false;
-    },
     toggleMenu() {
       // if (!this.menuHidden) {
       //   this.menuHidden = true;
@@ -65,186 +56,186 @@ export default {
     return {
       title: "Yassine Bacha | Portfolio",
       link: [
-        // {
-        //   rel: "preload",
-        //   as: "font",
-        //   href: "@/assets/fonts/DOVENSPersonalUse-Bold.otf",
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "font",
-        //   href: "@/assets/fonts/DOVENSPersonalUse-SemiBold.otf",
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "font",
-        //   href: "@/assets/fonts/DOVENSPersonalUse-Regular.otf",
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "font",
-        //   href: "@/assets/fonts/DOVENSPersonalUse-Light.otf",
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "font",
-        //   href: "@/assets/fonts/RussoOne-Regular.ttf",
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "font",
-        //   href: "@/assets/fonts/SecularOne-Regular.ttf",
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/medical-palpation-assistance-system/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/medical-palpation-assistance-system/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/medical-palpation-assistance-system/3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/game/timgad/1.jpg"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/game/timgad/2.jpg"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/game/timgad/3.jpg"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/game/parker/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/game/parker/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/game/parker/3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/hiragana-pose-estimation/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/hiragana-pose-estimation/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/hiragana-pose-estimation/3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/movement-recognition/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/movement-recognition/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/movement-recognition/3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/tic-tac-toe-minmax/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/ai/tic-tac-toe-minmax/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/sinal/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/sinal/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/sinal/3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/swiftlinks/client.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/swiftlinks/seller.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/swiftlinks/delivery.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/taleb-universe/all-3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/viddom/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/viddom/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/uiux/viddom/3.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/web/originova/1.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/web/originova/2.png"
-        // },
-        // {
-        //   rel: "preload",
-        //   as: "image",
-        //   href: "@/assets/web/osms/1.png"
-        // },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-Bold.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-SemiBold.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-Regular.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/DOVENSPersonalUse-Light.otf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/RussoOne-Regular.ttf",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: "@/assets/fonts/SecularOne-Regular.ttf",
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/medical-palpation-assistance-system/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/medical-palpation-assistance-system/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/medical-palpation-assistance-system/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/timgad/1.jpg"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/timgad/2.jpg"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/timgad/3.jpg"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/parker/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/parker/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/game/parker/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/hiragana-pose-estimation/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/hiragana-pose-estimation/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/hiragana-pose-estimation/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/movement-recognition/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/movement-recognition/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/movement-recognition/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/tic-tac-toe-minmax/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/ai/tic-tac-toe-minmax/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/sinal/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/sinal/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/sinal/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/swiftlinks/client.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/swiftlinks/seller.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/swiftlinks/delivery.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/taleb-universe/all-3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/viddom/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/viddom/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/uiux/viddom/3.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/web/originova/1.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/web/originova/2.png"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/web/osms/1.png"
+        },
       ]
     }
   }

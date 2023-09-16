@@ -1,6 +1,0 @@
-Medical Palpation Assistance System
-
-A system aimed toward medical practitioners to learn and practice medical palpation
-The system relies on Virtual Reality and Deep Learning
-
-Tools used: Unreal Engine 4, Blender, Leap Motion, JavaScript, NodeJS, ExpressJS, ML5JS, P5JS

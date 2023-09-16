@@ -1,3 +1,0 @@
-The Originova website aims to deliver showcase the set of services delivered and the products made by Originova
-
-Tools used: WordPress

@@ -34,12 +34,16 @@
             </div>
             <div class="project-image-blur">
               <!-- <img class="project-image-bg" :src="require('@/assets/projects/' + this.selectedProjectImage)" />
-              <img class="project-image" :src="require('@/assets/projects/' + this.selectedProjectImage)" /> -->
+                <img class="project-image" :src="require('@/assets/projects/' + this.selectedProjectImage)" /> -->
 
+              <!-- <div class="project-image-bg" v-lazy="require('@/assets/projects/' + this.selectedProjectImage)"
+                :style="'background-image: url(' + require('@/assets/projects/' + this.selectedProjectImage) + ');'" />
+              <div class="project-image" v-lazy="require('@/assets/projects/' + this.selectedProjectImage)"
+                :style="'background-image: url(' + require('@/assets/projects/' + this.selectedProjectImage) + ');'" /> -->
               <div class="project-image-bg"
-                :style="'background-image: url(' + require('@/assets/projects/' + this.selectedProjectImage) + ');'" />
+                v-lazy:background-image="require('@/assets/projects/' + this.selectedProjectImage)" />
               <div class="project-image"
-                :style="'background-image: url(' + require('@/assets/projects/' + this.selectedProjectImage) + ');'" />
+                v-lazy:background-image="require('@/assets/projects/' + this.selectedProjectImage)" />
 
               <!-- <img class="project-image-bg"
                 :src="require('@/assets/projects/' + this.projects[this.selectedProject].image)" />

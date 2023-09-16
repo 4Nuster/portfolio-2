@@ -1,5 +1,0 @@
-Japanese Hiragana Classification with Pose Estimation AI
-
-A mini-game that teaches Japanese Hiragana using a Deep Learning solution: pose-estimation to classify poses
-
-Tools used: JavaScript, ML5JS, P5JS

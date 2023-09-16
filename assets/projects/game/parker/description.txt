@@ -1,6 +1,0 @@
-PARKER: Become Probe
-
-Submitted solution to the NASA Space Apps Challenge 2022
-A 3D game that revolves around the journey of the Parker solar probe
-
-Tools used: JavaScript, ThreeJS, Spline, Blender

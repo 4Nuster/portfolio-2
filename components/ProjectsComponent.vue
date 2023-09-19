@@ -110,6 +110,15 @@ export default {
           tags: ['game']
         },
         {
+          images: ['game/rubik/2.png', 'game/rubik/3.png', 'game/rubik/1.png'],
+          image: 'game/rubik/1.png',
+          title: 'Rubik Cube With OpenGL',
+          description:
+            `A <span>3</span>D interactive Rubik's cube video game<span>,</span> implementing numerous <span>3</span>D rendering concepts such as PBR<span>,</span> shaders and materials<span>,</span> controllable camera<span>,</span> animated interactive textured objects<br/><br/>
+            Tools used<span>:</span> C<span>++,</span> OpenGL`,
+          tags: ['game']
+        },
+        {
           images: ['game/parker/2.png', 'game/parker/3.png', 'game/parker/1.png'],
           image: 'game/parker/2.png',
           title: 'Parker Become Probe',

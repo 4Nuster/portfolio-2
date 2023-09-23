@@ -93,10 +93,10 @@ export default {};
   font-family: DovensBold, sans-serif;
   font-size: clamp(32px, 50vw, 72px);
   line-height: clamp(32px, 50vw, 72px);
-  background: linear-gradient(to bottom, #c29a75, #c17c64);
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 6px 12px #00000088);
+  filter: drop-shadow(0 6px 12px var(--black-50));
 }
 
 .title-bg {
@@ -105,15 +105,15 @@ export default {};
   font-family: DovensBold, sans-serif;
   font-size: clamp(32px, 50vw, 72px);
   line-height: clamp(32px, 50vw, 72px);
-  -webkit-text-stroke: 3px #c17c6488;
-  color: #151518;
+  -webkit-text-stroke: 3px var(--primary-color-50);
+  color: var(--background-color);
   z-index: -1;
 }
 
 .content {
   font-family: DovensRegular, sans-serif;
   font-size: clamp(18px, 50vw, 24px);
-  color: #ffffff;
+  color: var(--white);
 }
 
 .content span {
@@ -129,7 +129,7 @@ export default {};
 
 .my-photo {
   height: 50vh;
-  filter: drop-shadow(0 6px 12px #00000088);
+  filter: drop-shadow(0 6px 12px var(--black-50));
 }
 
 @media only screen and (max-width: 1600px) {

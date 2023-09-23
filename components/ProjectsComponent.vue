@@ -256,9 +256,9 @@ export default {
 
       for (let i = 0; i < projects.length; i++) {
         if (projects[i] == projects[to]) continue;
-        document.getElementsByClassName(projects[i])[0].style.color = "#fff";
+        document.getElementsByClassName(projects[i])[0].style.color = "var(--white)";
       }
-      document.getElementsByClassName(projects[to])[0].style.color = "#C17C64";
+      document.getElementsByClassName(projects[to])[0].style.color = "var(--primary-color)";
       this.selectedProjectCategory = to;
 
       this.selectedProject = 0;
@@ -417,10 +417,10 @@ export default {
   font-family: DovensBold, sans-serif;
   font-size: clamp(48px, 70vw, 100px);
   line-height: clamp(48px, 70vw, 100px);
-  background: linear-gradient(to top, #c29a75, #c17c64);
+  background: linear-gradient(to top, var(--secondary-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 6px 12px #00000088);
+  filter: drop-shadow(0 6px 12px var(--black-50));
 }
 
 .title-bg {
@@ -429,8 +429,8 @@ export default {
   font-family: DovensBold, sans-serif;
   font-size: clamp(48px, 70vw, 100px);
   line-height: clamp(48px, 70vw, 100px);
-  -webkit-text-stroke: 3px #c17c6488;
-  color: #151518;
+  -webkit-text-stroke: 3px var(--primary-color-50);
+  color: var(--background-color);
   z-index: -1;
 }
 
@@ -441,11 +441,11 @@ export default {
   /* margin-left: 22vw; */
   /*padding-right: 2vw;
   border-radius: 5%;
-  border-right: #C17C64 5px solid;*/
+  border-right: var(--primary-color) 5px solid;*/
 }
 
 .projects-menu {
-  color: #fff;
+  color: var(--white);
   font-family: DovensRegular, sans-serif;
   font-size: 24px;
   text-align: left;
@@ -464,7 +464,7 @@ export default {
 }
 
 .projects-menu .menu-all {
-  color: #C17C64;
+  color: var(--primary-color);
 }
 
 .counter-grid {
@@ -481,10 +481,10 @@ export default {
   font-family: RussoOne, sans-serif;
   font-size: clamp(48px, 70vw, 160px);
   line-height: clamp(48px, 70vw, 160px);
-  background: linear-gradient(to bottom, #c29a75, #c17c64);
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 6px 12px #00000088);
+  filter: drop-shadow(0 6px 12px var(--black-50));
 }
 
 .counter-bg {
@@ -493,13 +493,13 @@ export default {
   font-family: RussoOne, sans-serif;
   font-size: clamp(48px, 70vw, 160px);
   line-height: clamp(48px, 70vw, 160px);
-  -webkit-text-stroke: 3px #c17c6488;
-  color: #151518;
+  -webkit-text-stroke: 3px var(--primary-color-50);
+  color: var(--background-color);
   z-index: -1;
 }
 
 .counter-title {
-  color: #fff;
+  color: var(--white);
   font-family: DovensRegular, sans-serif;
   font-size: 24px;
 }
@@ -523,7 +523,7 @@ export default {
   border-radius: 15px;
   width: calc(600px - 6px);
   height: 350px;
-  border: solid 3px #C17C64;
+  border: solid 3px var(--primary-color);
   z-index: -1;
 }
 
@@ -538,7 +538,7 @@ export default {
 .project-image-blur {
   position: relative;
   overflow: hidden;
-  background-color: #151518;
+  background-color: var(--background-color);
 }
 
 .project-image {
@@ -561,7 +561,7 @@ export default {
 }
 
 .project-controls {
-  background-color: #151518;
+  background-color: var(--background-color);
   width: 400px;
   margin-left: 100px;
   margin-top: -35px;
@@ -574,7 +574,7 @@ export default {
 .project-button {
   font-family: DovensRegular, sans-serif;
   font-size: 24px;
-  color: #c17c64;
+  color: var(--primary-color);
   cursor: pointer;
   transition: color 500ms ease-in-out, opacity 500ms ease-in-out;
 }
@@ -590,7 +590,7 @@ export default {
 .project-inactive-button {
   font-family: DovensRegular, sans-serif;
   font-size: 24px;
-  color: #5A6473;
+  color: var(--gray);
   opacity: 0.2;
   transition: color 500ms ease-in-out, opacity 500ms ease-in-out;
 }
@@ -599,7 +599,7 @@ export default {
   margin-top: 20px;
   font-family: DovensSemiBold, sans-serif;
   font-size: 48px;
-  background: linear-gradient(to bottom, #c29a75, #c17c64);
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -609,7 +609,7 @@ export default {
   margin-top: 10px;
   font-family: DovensLight, sans-serif;
   font-size: 18px;
-  color: #ffffff;
+  color: var(--white);
 }
 
 .project-content>>>span {
@@ -770,7 +770,7 @@ export default {
   }
 
   .title {
-    background: linear-gradient(to bottom, #c29a75, #c17c64);
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

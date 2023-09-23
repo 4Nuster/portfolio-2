@@ -59,8 +59,8 @@ export default {};
 .nickname {
   font-family: DovensBold, sans-serif;
   font-size: clamp(32px, 50vw, 80px);
-  color: #151518;
-  -webkit-text-stroke: .04em #c29a7588;
+  color: var(--background-color);
+  -webkit-text-stroke: .04em var(--secondary-color-50);
   line-height: 0px;
   margin-right: 20vw;
   margin-bottom: 20px;
@@ -68,36 +68,36 @@ export default {};
 
 .hero .nickname span {
   font-family: SecularOne;
-  -webkit-text-stroke: .01em #c29a7588;
+  -webkit-text-stroke: .01em var(--secondary-color-50);
 }
 
 .hero .title {
   font-family: DovensBold, sans-serif;
   font-size: clamp(48px, 70vw, 120px);
   line-height: clamp(48px, 70vw, 120px);
-  background: linear-gradient(to bottom, #c29a75, #c17c64);
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 0px;
   margin-bottom: 0px;
-  filter: drop-shadow(0 6px 12px #00000088);
+  filter: drop-shadow(0 6px 12px var(--black-50));
 }
 
 .hero .subtitle {
   font-family: DovensRegular, sans-serif;
   font-size: clamp(24px, 50vw, 48px);
-  color: #151518;
-  background: linear-gradient(to bottom, #c17c64, #5b423c);
+  color: var(--background-color);
+  background: linear-gradient(to bottom, var(--primary-color), var(--alternative-color));
   -webkit-background-clip: text;
   -webkit-text-stroke: .1em transparent;
-  /* -webkit-text-stroke: .03em #c17c64; */
+  /* -webkit-text-stroke: .03em var(--primary-color); */
   margin-top: 0px;
 }
 
 .scroll {
   font-size: 28px;
   font-family: DovensRegular, sans-serif;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 200px;
   opacity: 0;
   animation: fade-in-out ease-in-out 5s 1.5s infinite;

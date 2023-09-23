@@ -243,6 +243,21 @@ export default {
 </script>
 
 <style>
+:root {
+  --background-color: #151518;
+  --background-color-darker: #0d0d0f;
+  --primary-color: #c17c64;
+  --primary-color-50: #c17c6488;
+  --secondary-color: #c29a75;
+  --secondary-color-50: #c29a7588;
+  --alternative-color: #5b423c;
+  --black: #000000;
+  --black-50: #00000088;
+  --black-70: #000000aa;
+  --white: #ffffff;
+  --gray: #5A6473;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -283,8 +298,8 @@ html {
 }
 
 body {
-  background-color: #151518;
-  /*background: linear-gradient(to bottom, #151518, #0d0d0f, #151518);*/
+  background-color: var(--background-color);
+  /* background: radial-gradient(var(--background-color), var(--background-color-darker)); */
 }
 
 h1,
@@ -364,7 +379,7 @@ h6 {
     margin-right: auto;
     margin-top: 20px;
     z-index: 70;
-    filter: drop-shadow(0 4px 4px #000000aa);
+    filter: drop-shadow(0 4px 4px var(--black-70));
   }
 }
 

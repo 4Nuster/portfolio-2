@@ -42,8 +42,8 @@ export default {
           document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-projects")[0]
         ];
-        item.style.color = "#C17C64";
-        others.forEach(other => other.style.color = "#ffffff");
+        item.style.color = "var(--primary-color)";
+        others.forEach(other => other.style.color = "var(--white)");
       } else if (scrollable >= visualViewport.height * 3) {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41 * 3).toString() + "px)";
         let item = document.getElementsByClassName("menu-projects")[0];
@@ -53,8 +53,8 @@ export default {
           document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
-        item.style.color = "#C17C64";
-        others.forEach(other => other.style.color = "#ffffff");
+        item.style.color = "var(--primary-color)";
+        others.forEach(other => other.style.color = "var(--white)");
       } else if (scrollable >= visualViewport.height * 2) {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41 * 2).toString() + "px)";
         let item = document.getElementsByClassName("menu-skills")[0];
@@ -64,8 +64,8 @@ export default {
           document.getElementsByClassName("menu-projects")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
-        item.style.color = "#C17C64";
-        others.forEach(other => other.style.color = "#ffffff");
+        item.style.color = "var(--primary-color)";
+        others.forEach(other => other.style.color = "var(--white)");
       } else if (scrollable >= visualViewport.height) {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh + " + (41).toString() + "px)";
         let item = document.getElementsByClassName("menu-about")[0];
@@ -75,8 +75,8 @@ export default {
           document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
-        item.style.color = "#C17C64";
-        others.forEach(other => other.style.color = "#ffffff");
+        item.style.color = "var(--primary-color)";
+        others.forEach(other => other.style.color = "var(--white)");
       } else if (scrollable < visualViewport.height) {
         document.getElementsByClassName("scrolling-ball")[0].style.marginTop = "calc(70vh)";
         let item = document.getElementsByClassName("menu-home")[0];
@@ -86,8 +86,8 @@ export default {
           document.getElementsByClassName("menu-skills")[0],
           document.getElementsByClassName("menu-awards")[0]
         ];
-        item.style.color = "#C17C64";
-        others.forEach(other => other.style.color = "#ffffff");
+        item.style.color = "var(--primary-color)";
+        others.forEach(other => other.style.color = "var(--white)");
       }
     },
   },
@@ -106,7 +106,7 @@ export default {
 .line {
   position: absolute;
   height: 100vh;
-  background: linear-gradient(to bottom, #c29a75, #c17c64);
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   width: 5px;
   margin-left: 2vw;
   z-index: -1;
@@ -117,15 +117,15 @@ export default {
   height: 15px;
   width: 15px;
   border-radius: 100%;
-  background-color: #151518;
-  border: 3px #C17C64 solid;
+  background-color: var(--background-color);
+  border: 3px var(--primary-color) solid;
   margin-left: 1.6vw;
   margin-top: 70vh;
   transition: margin-top 500ms;
 }
 
 .menu-items {
-  color: #fff;
+  color: var(--white);
   font-family: DovensRegular, sans-serif;
   font-size: 24px;
   margin-top: 70vh;
@@ -140,7 +140,7 @@ export default {
 }
 
 .menu-items .menu-home {
-  color: #C17C64;
+  color: var(--primary-color);
 }
 
 .resume {
@@ -151,7 +151,7 @@ export default {
 }
 
 .resume a {
-  color: #C17C64;
+  color: var(--primary-color);
   font-family: DovensRegular, sans-serif;
   font-size: 24px;
   text-decoration: none;

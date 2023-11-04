@@ -53,6 +53,9 @@
           </div>
           <p class="project-title">{{ this.currentCategoryProjects[this.selectedProject].title }}</p>
           <div class="project-content" v-html="this.currentCategoryProjects[this.selectedProject].description" />
+          <a v-if="this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE'" class="project-link"
+            target="_blank" :href="this.currentCategoryProjects[this.selectedProject].link">{{
+              this.currentCategoryProjects[this.selectedProject].linkText }}</a>
           <!-- <div class="project-image-container">
 
             <div class="project-image-controller">
@@ -98,7 +101,9 @@ export default {
             The system relies on Virtual Reality and Deep Learning<br/><br/>
             Tools used<span>:</span> Unreal Engine <span>4</span><span>,</span> Blender<span>,</span> Leap Motion<span>,</span> JavaScript<span>,</span> NodeJS<span>,</span>
             ExpressJS<span>,</span> ML<span>5</span>JS<span>,</span> P<span>5</span>JS`,
-          tags: ['game', 'ai']
+          tags: ['game', 'ai'],
+          link: 'https://youtu.be/ZEp-3IZwe4U',
+          linkText: 'VIDEO'
         },
         {
           images: ['game/timgad/1.jpg', 'game/timgad/2.jpg', 'game/timgad/3.jpg'],
@@ -107,7 +112,9 @@ export default {
           description:
             `A realistic recreation of the historical site of Timgad in a Virtual Reality environment<br/><br/>
             Tools used<span>:</span> Unreal Engine <span>4,</span> Blender`,
-          tags: ['game']
+          tags: ['game'],
+          link: 'https://youtu.be/m1BGtgfj7LM',
+          linkText: 'VIDEO'
         },
         {
           images: ['game/rubik/2.png', 'game/rubik/3.png', 'game/rubik/1.png'],
@@ -116,7 +123,9 @@ export default {
           description:
             `A <span>3</span>D interactive Rubik's cube video game<span>,</span> implementing numerous <span>3</span>D rendering concepts such as PBR<span>,</span> shaders and materials<span>,</span> controllable camera<span>,</span> animated interactive textured objects<br/><br/>
             Tools used<span>:</span> C<span>++,</span> OpenGL`,
-          tags: ['game']
+          tags: ['game'],
+          link: 'https://github.com/4Nuster/Rubik-Cube',
+          linkText: 'CODE'
         },
         {
           images: ['game/parker/2.png', 'game/parker/3.png', 'game/parker/1.png'],
@@ -127,7 +136,9 @@ export default {
             A <span>3</span>D game that revolves around the journey of the Parker solar probe<br/><br/>
 
             Tools used<span>:</span> JavaScript<span>,</span> ThreeJS<span>,</span> Spline<span>,</span> Blender`,
-          tags: ['game']
+          tags: ['game'],
+          link: 'https://youtu.be/NPnDWFg_6mc',
+          linkText: 'VIDEO'
         },
         {
           images: ['ai/hiragana-pose-estimation/1.png', 'ai/hiragana-pose-estimation/2.png', 'ai/hiragana-pose-estimation/3.png'],
@@ -136,7 +147,9 @@ export default {
           description:
             `A mini<span>-</span>game that teaches Japanese Hiragana relying on a Deep Learning solution<span>:</span> Pose<span>-</span>Estimation to classify poses<br/><br/>
             Tools used<span>:</span> JavaScript<span>,</span> ML<span>5</span>JS<span>,</span> P<span>5</span>JS`,
-          tags: ['game', 'ai']
+          tags: ['game', 'ai'],
+          link: 'https://github.com/4Nuster/TAIV/tree/main/Project',
+          linkText: 'CODE'
         },
         {
           images: ['ai/movement-recognition/3.png', 'ai/movement-recognition/1.png', 'ai/movement-recognition/2.png'],
@@ -145,7 +158,9 @@ export default {
           description:
             `Human pose recognition in real<span>-</span>time using Computer Vision<br/><br/>
             Tools used<span>:</span> Python<span>,</span> OpenCV<span>,</span> PyQt`,
-          tags: ['ai']
+          tags: ['ai'],
+          link: 'https://github.com/4Nuster/MovementRecognizer/tree/main/Code',
+          linkText: 'CODE'
         },
         {
           images: ['ai/tic-tac-toe-minmax/2.png', 'ai/tic-tac-toe-minmax/1.png'],
@@ -156,7 +171,9 @@ export default {
             An implementation of the MinMax algorithm<br/><br/>
 
             Tools used<span>:</span> Java<span>,</span> Processing`,
-          tags: ['ai']
+          tags: ['ai'],
+          link: 'https://github.com/4Nuster/TPs-IA-CM/tree/main/IA/Partie%202%20(Vision)/Projet%20(Tic%20Tac%20Toe%20w%20MiniMax)',
+          linkText: 'CODE'
         },
         {
           images: ['uiux/sinal/1.png', 'uiux/sinal/2.png', 'uiux/sinal/3.png'],
@@ -167,7 +184,9 @@ export default {
             the technologies that they use<span>,</span> tips and articles<span>,</span> and more information about the company<br/><br/>
             
             Tools used<span>:</span> HTML<span>/</span>CSS<span>,</span> Javascript<span>,</span> Vue JS<span>,</span> Adobe XD`,
-          tags: ['web', 'uiux']
+          tags: ['web', 'uiux'],
+          link: 'https://website.optiquesinaldz.com/',
+          linkText: 'WEBSITE'
         },
         {
           images: ['uiux/swiftlinks/client.png', 'uiux/swiftlinks/seller.png', 'uiux/swiftlinks/delivery.png'],
@@ -179,6 +198,8 @@ export default {
 
             Tools used<span>:</span> Figma`,
           tags: ['uiux'],
+          link: 'https://www.figma.com/proto/3IWD3eOzEk9A8JYdIRH1IS/',
+          linkText: 'PROTOTYPE'
         },
         {
           images: ['uiux/taleb-universe/all-3.png'],
@@ -190,6 +211,8 @@ export default {
 
             Tools used<span>:</span> HTML<span>/</span>CSS<span>,</span> Javascript<span>,</span> Vue JS<span>,</span> Ionic<span>,</span> Adobe XD`,
           tags: ['web', 'uiux'],
+          link: 'https://play.google.com/store/apps/details?id=com.originova.talebuniverse',
+          linkText: 'GET APP'
         },
         {
           images: ['uiux/viddom/1.png', 'uiux/viddom/2.png', 'uiux/viddom/3.png'],
@@ -202,6 +225,21 @@ export default {
 
             Tools used<span>:</span> HTML<span>/</span>CSS<span>,</span> Javascript<span>,</span> Vue JS<span>,</span> Ionic<span>,</span> Adobe XD`,
           tags: ['web', 'uiux'],
+          link: '',
+          linkText: 'UNAVAILABLE'
+        },
+        {
+          images: ['uiux/hammoud-companion/1.png', 'uiux/hammoud-companion/2.png'],
+          image: 'uiux/viddom/1.png',
+          title: 'Hammoud Boualem Companion App',
+          description:
+            `JunctionX Algiers <span>2021</span> Hackathon<span>:</span> Hamoud Boualem mobile app challenge<br/>
+            My work comprised the design of the mobile app<span>,</span> and the development and realisation of some parts of within the mobile app<br/><br/>
+
+            Tools used<span>:</span> HTML<span>/</span>CSS<span>,</span> Javascript<span>,</span> Vue JS<span>,</span> Ionic<span>,</span> Adobe XD`,
+          tags: ['web', 'uiux'],
+          link: 'https://youtu.be/zVFXH47MBWY',
+          linkText: 'VIDEO'
         },
         {
           images: ['web/originova/1.png', 'web/originova/2.png'],
@@ -211,6 +249,8 @@ export default {
 
             Tools used<span>:</span> WordPress<span>,</span> HTML<span>/</span>CSS`,
           tags: ['web'],
+          link: '',
+          linkText: 'UNAVAILABLE'
         },
         {
           images: ['web/osms/1.png'],
@@ -224,6 +264,8 @@ export default {
 
             Tools used<span>:</span> HTML<span>/</span>CSS<span>,</span> Javascript<span>,</span> Vue JS<span>,</span> Electron`,
           tags: ['web'],
+          link: '',
+          linkText: 'UNAVAILABLE'
         },
       ]
     }
@@ -273,16 +315,25 @@ export default {
         document.getElementsByClassName("project-image-blur")[0].classList.add("slide-selected-skill-right-begin");
         document.getElementsByClassName("project-title")[0].classList.add("slide-selected-skill-right-begin");
         document.getElementsByClassName("project-content")[0].classList.add("slide-selected-skill-right-begin");
+        if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+          document.getElementsByClassName("project-link")[0].classList.add("slide-selected-skill-right-begin");
+        }
 
         setTimeout(() => {
 
           document.getElementsByClassName("project-image-blur")[0].classList.remove("slide-selected-skill-right-begin");
           document.getElementsByClassName("project-title")[0].classList.remove("slide-selected-skill-right-begin");
           document.getElementsByClassName("project-content")[0].classList.remove("slide-selected-skill-right-begin");
+          if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+            document.getElementsByClassName("project-link")[0].classList.remove("slide-selected-skill-right-begin");
+          }
 
           document.getElementsByClassName("project-image-blur")[0].classList.add("slide-selected-skill-right-end");
           document.getElementsByClassName("project-title")[0].classList.add("slide-selected-skill-right-end");
           document.getElementsByClassName("project-content")[0].classList.add("slide-selected-skill-right-end");
+          if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+            document.getElementsByClassName("project-link")[0].classList.add("slide-selected-skill-right-end");
+          }
 
           this.selectedProject += 1;
           this.selectedProjectImage = this.currentCategoryProjects[this.selectedProject].images[0];
@@ -294,6 +345,9 @@ export default {
             document.getElementsByClassName("project-image-blur")[0].classList.remove("slide-selected-skill-right-end");
             document.getElementsByClassName("project-title")[0].classList.remove("slide-selected-skill-right-end");
             document.getElementsByClassName("project-content")[0].classList.remove("slide-selected-skill-right-end");
+            if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+              document.getElementsByClassName("project-link")[0].classList.remove("slide-selected-skill-right-end");
+            }
 
             this.updateProjectButtons();
           }, 500);
@@ -308,16 +362,25 @@ export default {
         document.getElementsByClassName("project-image-blur")[0].classList.add("slide-selected-skill-left-begin");
         document.getElementsByClassName("project-title")[0].classList.add("slide-selected-skill-left-begin");
         document.getElementsByClassName("project-content")[0].classList.add("slide-selected-skill-left-begin");
+        if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+          document.getElementsByClassName("project-link")[0].classList.add("slide-selected-skill-left-begin");
+        }
 
         setTimeout(() => {
 
           document.getElementsByClassName("project-image-blur")[0].classList.remove("slide-selected-skill-left-begin");
           document.getElementsByClassName("project-title")[0].classList.remove("slide-selected-skill-left-begin");
           document.getElementsByClassName("project-content")[0].classList.remove("slide-selected-skill-left-begin");
+          if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+            document.getElementsByClassName("project-link")[0].classList.remove("slide-selected-skill-left-begin");
+          }
 
           document.getElementsByClassName("project-image-blur")[0].classList.add("slide-selected-skill-left-end");
           document.getElementsByClassName("project-title")[0].classList.add("slide-selected-skill-left-end");
           document.getElementsByClassName("project-content")[0].classList.add("slide-selected-skill-left-end");
+          if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+            document.getElementsByClassName("project-link")[0].classList.add("slide-selected-skill-left-end");
+          }
 
           this.selectedProject -= 1;
           this.selectedProjectImage = this.currentCategoryProjects[this.selectedProject].images[0];
@@ -329,6 +392,9 @@ export default {
             document.getElementsByClassName("project-image-blur")[0].classList.remove("slide-selected-skill-left-end");
             document.getElementsByClassName("project-title")[0].classList.remove("slide-selected-skill-left-end");
             document.getElementsByClassName("project-content")[0].classList.remove("slide-selected-skill-left-end");
+            if (this.currentCategoryProjects[this.selectedProject].linkText != 'UNAVAILABLE') {
+              document.getElementsByClassName("project-link")[0].classList.remove("slide-selected-skill-left-end");
+            }
 
             this.updateProjectButtons();
           }, 500);
@@ -614,6 +680,14 @@ export default {
 
 .project-content>>>span {
   font-family: RussoOne, sans-serif;
+}
+
+.project-link {
+  margin-top: 20px;
+  font-family: DovensSemiBold, sans-serif;
+  font-size: 20px;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 /* animations */

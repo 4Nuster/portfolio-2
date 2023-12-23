@@ -9,23 +9,47 @@
             <h2 class="title-bg">IT IS I</h2>
           </div>
           <p class="content">
-            A Software Developer with an MSc in Computer Vision<span>.</span> I possess a strong aptitude for rapid
-            learning<span>,</span>
-            creativity<span>,</span> adaptability<span>,</span> and self<span>-</span>motivation<span>.</span> My passion
-            lies in the realms of Web Development<span>,</span> UI<span>/</span>UX Design<span>,</span>
-            Virtual Reality<span>,</span> and Artificial Intelligence<span>.</span>
-            <br><br>
-            Work Experience<span>:</span> <br>
-            <span>-</span> Salesforce Developer Consultant at SOLJIT <span>(</span>Feb <span>2023 -</span>
-            Present<span>)</span> <br>
-            <span>-</span> Frontend Developer and UI<span>/</span>UX Designer <span>(</span>Jul <span>2022 -</span> Feb
-            <span>2023)</span> <br>
-            <br>
-            Education<span>:</span> <br>
-            <span>-</span> MSc<span>,</span> Computer Vision at USTHB <span>(</span>Oct <span>2022)</span>
-            <br>
-            <span>-</span> BSc<span>,</span> Software Engineering at USTHB <span>(</span>Nov
-            <span>2020)</span>
+            Software Developer with<span class="alterfont">.</span> MSc in Computer Vision<span class="alterfont">.</span>
+            Possessing a strong aptitude for rapid learning<span class="alterfont">,</span> creativity<span
+              class="alterfont">,</span> adaptability<span class="alterfont">,</span> and self<span
+              class="alterfont">-</span>motivation <span class="alterfont">.</span> My passion lies in the realms of Web
+            Development<span class="alterfont">, </span> UI<span class="alterfont">/</span>UX Design<span
+              class="alterfont">,</span> Virtual Reality<span class="alterfont">,</span> and Artificial Intelligence<span
+              class="alterfont">.</span><br><br>
+
+            Work Experience<span class="alterfont">:</span> <br>
+
+            <span class="alterfont">-</span> Salesforce Developer Consultant at Levio<br>
+            <span class="date">
+              <span class="alterfont">(</span>Feb <span class="alterfont">2023 -</span>Present<span
+                class="alterfont">)</span><br>
+            </span>
+
+            <span class="alterfont">-</span> Frontend Developer and UI<span class="alterfont">/</span>UX Designer at
+            Originova<br>
+            <span class="date">
+              <span class="alterfont">(</span>Jul <span class="alterfont">2022 -</span> Feb<span
+                class="alterfont">2023)</span><br><br>
+            </span>
+
+            Education<span class="alterfont">:</span><br>
+
+            <span class="alterfont">-</span> PhD<span class="alterfont">,</span> AI <span class="alterfont">&</span> Image
+            Processing at University of
+            Biskra<br>
+            <span class="date">
+              <span class="alterfont">(</span>Ongoing<span class="alterfont">)</span><br>
+            </span>
+
+            <span class="alterfont">-</span> MSc<span class="alterfont">,</span> Computer Vision at USTHB<br>
+            <span class="date">
+              <span class="alterfont">(</span>Oct <span class="alterfont">2022)</span><br>
+            </span>
+
+            <span class="alterfont">-</span> BSc<span class="alterfont">,</span> Software Engineering at USTHB<br>
+            <span class="date">
+              <span class="alterfont">(</span>Nov <span class="alterfont">2020)</span>
+            </span>
           </p>
         </div>
         <img class="my-photo" src="../assets/me.png" alt="">
@@ -116,8 +140,13 @@ export default {};
   color: var(--white);
 }
 
-.content span {
+.content .alterfont {
   font-family: RussoOne, sans-serif;
+}
+
+.content .date {
+  color: var(--primary-color);
+  font-family: DovensLight, sans-serif;
 }
 
 .flex {

@@ -868,6 +868,11 @@ export default {
   .project-title {
     text-align: center;
   }
+
+  .about .bg4 {
+    filter: blur(6px);
+    animation: rotation 20s linear infinite;
+  }
 }
 
 @media only screen and (max-width: 768px) {

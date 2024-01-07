@@ -12,44 +12,44 @@
             Software Developer with<span class="alterfont">.</span> MSc in Computer Vision<span class="alterfont">.</span>
             Possessing a strong aptitude for rapid learning<span class="alterfont">,</span> creativity<span
               class="alterfont">,</span> adaptability<span class="alterfont">,</span> and self<span
-              class="alterfont">-</span>motivation <span class="alterfont">.</span> My passion lies in the realms of Web
+              class="alterfont">-</span>motivation <span class="alterfont">.</span> My passion lies in Web
             Development<span class="alterfont">, </span> UI<span class="alterfont">/</span>UX Design<span
               class="alterfont">,</span> Virtual Reality<span class="alterfont">,</span> and Artificial Intelligence<span
               class="alterfont">.</span><br><br>
 
-            Work Experience<span class="alterfont">:</span> <br>
+            Work Experience<span class="alterfont">:</span><br>
 
-            <span class="alterfont">-</span> Salesforce Developer Consultant at Levio<br>
             <span class="date">
-              <span class="alterfont">(</span>Feb <span class="alterfont">2023 -</span>Present<span
+              <span class="alterfont">(</span>Feb<span class="alterfont"> 2023 - </span>Present<span
                 class="alterfont">)</span><br>
             </span>
+            <span class="alterfont">-</span> Salesforce Developer Consultant at Levio<br>
 
-            <span class="alterfont">-</span> Frontend Developer and UI<span class="alterfont">/</span>UX Designer at
-            Originova<br>
             <span class="date">
-              <span class="alterfont">(</span>Jul <span class="alterfont">2022 -</span> Feb<span
-                class="alterfont">2023)</span><br><br>
+              <span class="alterfont">(</span>Jul<span class="alterfont"> 2022 - </span>Feb<span class="alterfont">
+                2023)</span><br>
             </span>
+            <span class="alterfont">-</span> Frontend Developer and UI<span class="alterfont">/</span>UX Designer at
+            Originova<br><br>
 
             Education<span class="alterfont">:</span><br>
 
-            <span class="alterfont">-</span> PhD<span class="alterfont">,</span> AI <span class="alterfont">&</span> Image
-            Processing at University of
-            Biskra<br>
             <span class="date">
               <span class="alterfont">(</span>Ongoing<span class="alterfont">)</span><br>
             </span>
+            <span class="alterfont">-</span> PhD<span class="alterfont">,</span> AI <span class="alterfont">&</span> Image
+            Processing at University of
+            Biskra<br>
 
+            <span class="date">
+              <span class="alterfont">(</span>Oct<span class="alterfont"> 2022)</span><br>
+            </span>
             <span class="alterfont">-</span> MSc<span class="alterfont">,</span> Computer Vision at USTHB<br>
-            <span class="date">
-              <span class="alterfont">(</span>Oct <span class="alterfont">2022)</span><br>
-            </span>
 
-            <span class="alterfont">-</span> BSc<span class="alterfont">,</span> Software Engineering at USTHB<br>
             <span class="date">
-              <span class="alterfont">(</span>Nov <span class="alterfont">2020)</span>
+              <span class="alterfont">(</span>Nov<span class="alterfont"> 2020)</span><br>
             </span>
+            <span class="alterfont">-</span> BSc<span class="alterfont">,</span> Software Engineering at USTHB<br>
           </p>
         </div>
         <img class="my-photo" src="../assets/me.png" alt="">
@@ -147,6 +147,9 @@ export default {};
 .content .date {
   color: var(--primary-color);
   font-family: DovensLight, sans-serif;
+  display: block;
+  margin-top: 6px;
+  margin-bottom: -3px;
 }
 
 .flex {
@@ -221,6 +224,11 @@ export default {};
 
   .my-photo {
     height: 80vw;
+  }
+
+  .about .bg2 {
+    filter: blur(6px);
+    animation: rotation 20s linear infinite;
   }
 }
 </style>
